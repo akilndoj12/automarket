@@ -27,7 +27,7 @@ export default function CarCard({ car }: { car: Car }) {
         <div className="absolute left-3 top-3 flex gap-1.5">
           {car.status !== "active" && <StatusBadge status={car.status} />}
           {off > 0 && !sold && (
-            <span className="rounded-md bg-brand px-2 py-1 text-xs font-bold text-white">-{off}%</span>
+            <span className="rounded-md bg-brand px-2 py-1 text-xs font-bold text-ink">-{off}%</span>
           )}
         </div>
         {car.images.length > 1 && (

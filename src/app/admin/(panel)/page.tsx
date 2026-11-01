@@ -53,7 +53,7 @@ export default async function AdminHome() {
         <section className="card p-5">
           <div className="mb-3 flex items-center justify-between">
             <h2 className="font-bold">Ndryshuar së fundmi</h2>
-            <Link href="/admin/makinat" className="text-sm font-semibold text-brand">Të gjitha →</Link>
+            <Link href="/admin/makinat" className="text-sm font-semibold text-brand-dark">Të gjitha →</Link>
           </div>
           {latest.length === 0 ? (
             <p className="text-sm text-slate-500">Ende nuk keni shtuar makina.</p>
@@ -61,7 +61,7 @@ export default async function AdminHome() {
             <ul className="divide-y divide-slate-100">
               {latest.map((c) => (
                 <li key={c.id} className="flex items-center justify-between gap-3 py-2.5 text-sm">
-                  <Link href={`/admin/makinat/${c.id}`} className="font-semibold hover:text-brand">
+                  <Link href={`/admin/makinat/${c.id}`} className="font-semibold hover:text-brand-dark">
                     {c.brand} {c.model} {c.year}
                   </Link>
                   <span className="flex items-center gap-2">
@@ -77,7 +77,7 @@ export default async function AdminHome() {
         <section className="card p-5">
           <div className="mb-3 flex items-center justify-between">
             <h2 className="font-bold">Kërkesat e fundit</h2>
-            <Link href="/admin/kerkesat" className="text-sm font-semibold text-brand">Të gjitha →</Link>
+            <Link href="/admin/kerkesat" className="text-sm font-semibold text-brand-dark">Të gjitha →</Link>
           </div>
           {inquiries.length === 0 ? (
             <p className="text-sm text-slate-500">Asnjë kërkesë ende.</p>

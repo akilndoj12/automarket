@@ -69,9 +69,9 @@ export default function CarForm({ car, privateVin, notes }: Props) {
         <section className="card p-5">
           <h2 className="mb-4 font-bold">Të dhënat kryesore</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <Field label="Marka *"><input name="brand" required defaultValue={car?.brand} className="input" placeholder="Volkswagen" list="brands" /></Field>
-            <Field label="Modeli *"><input name="model" required defaultValue={car?.model} className="input" placeholder="Tiguan" /></Field>
-            <Field label="Versioni"><input name="version" defaultValue={car?.version ?? ""} className="input" placeholder="2.0 TDI Highline" /></Field>
+            <Field label="Marka *"><input name="brand" required defaultValue={car?.brand} className="input" placeholder="Land Rover" list="brands" /></Field>
+            <Field label="Modeli *"><input name="model" required defaultValue={car?.model} className="input" placeholder="Defender" /></Field>
+            <Field label="Versioni"><input name="version" defaultValue={car?.version ?? ""} className="input" placeholder="110 D300 X-Dynamic" /></Field>
             <Field label="Viti *"><input name="year" type="number" min={1950} max={2100} required defaultValue={car?.year} className="input" /></Field>
             <Field label="Çmimi (€) *"><input name="price" type="number" min={0} required defaultValue={car?.price} className="input" /></Field>
             <Field label="Çmimi i mëparshëm (€) — për ofertë"><input name="old_price" type="number" min={0} defaultValue={car?.old_price ?? ""} className="input" placeholder="bosh = pa ofertë" /></Field>

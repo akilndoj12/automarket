@@ -59,7 +59,7 @@ export default async function AdminCars({ searchParams }: { searchParams: SP }) 
 
       {cars.length === 0 ? (
         <div className="card p-10 text-center text-slate-500">
-          Nuk ka makina këtu. <Link href="/admin/makinat/e-re" className="font-semibold text-brand">Shto të parën →</Link>
+          Nuk ka makina këtu. <Link href="/admin/makinat/e-re" className="font-semibold text-brand-dark">Shto të parën →</Link>
         </div>
       ) : (
         <div className="card divide-y divide-slate-100">
@@ -74,7 +74,7 @@ export default async function AdminCars({ searchParams }: { searchParams: SP }) 
                 )}
               </Link>
               <div className="min-w-48 flex-1">
-                <Link href={`/admin/makinat/${c.id}`} className="font-bold hover:text-brand">
+                <Link href={`/admin/makinat/${c.id}`} className="font-bold hover:text-brand-dark">
                   {c.brand} {c.model} {c.year}
                 </Link>
                 <p className="text-sm text-slate-500">

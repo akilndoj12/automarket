@@ -17,16 +17,17 @@ export default async function HomePage() {
       {/* Hero + kërkimi */}
       <section className="relative overflow-hidden bg-ink text-white">
         <div
-          className="pointer-events-none absolute inset-0 opacity-30"
+          className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(60% 80% at 85% 10%, #e8590c 0%, transparent 60%), radial-gradient(50% 60% at 0% 100%, #334155 0%, transparent 70%)",
+              "radial-gradient(55% 80% at 85% 0%, #c9a96155 0%, transparent 60%), radial-gradient(50% 60% at 0% 100%, #2a2a2e 0%, transparent 70%)",
           }}
         />
         <div className="container-x relative pb-24 pt-16 sm:pt-24">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand">{settings.site_name}</p>
-          <h1 className="mt-3 max-w-2xl text-4xl font-black leading-tight sm:text-5xl">
-            Gjej makinën që kërkon
+          <p className="text-sm font-medium uppercase tracking-[0.35em] text-brand">{settings.site_name}</p>
+          <h1 className="mt-4 max-w-2xl text-4xl font-light leading-tight sm:text-6xl">
+            Automjete premium,<br />
+            <span className="font-semibold">zgjedhur me kujdes.</span>
           </h1>
           {settings.tagline && <p className="mt-4 max-w-xl text-lg text-slate-300">{settings.tagline}</p>}
         </div>
@@ -48,7 +49,7 @@ export default async function HomePage() {
       <section className="container-x mt-12">
         <div className="mb-5 flex items-end justify-between">
           <h2 className="text-2xl font-extrabold">Makinat më të fundit</h2>
-          <Link href="/makinat" className="text-sm font-semibold text-brand hover:underline">Shiko të gjitha →</Link>
+          <Link href="/makinat" className="text-sm font-semibold text-brand-dark hover:underline">Shiko të gjitha →</Link>
         </div>
         <CarGrid cars={latest} empty="Së shpejti do të publikojmë makinat e para." />
       </section>
@@ -58,7 +59,7 @@ export default async function HomePage() {
         <section className="container-x mt-16">
           <div className="mb-5 flex items-end justify-between">
             <h2 className="text-2xl font-extrabold">Makinat në ofertë</h2>
-            <Link href="/oferta" className="text-sm font-semibold text-brand hover:underline">Të gjitha ofertat →</Link>
+            <Link href="/oferta" className="text-sm font-semibold text-brand-dark hover:underline">Të gjitha ofertat →</Link>
           </div>
           <CarGrid cars={offers.slice(0, 4)} />
         </section>
@@ -67,9 +68,9 @@ export default async function HomePage() {
       {/* Pse ne */}
       <section className="container-x mt-16 grid gap-5 md:grid-cols-3">
         {[
-          ["Makina të kontrolluara", "Çdo automjet kontrollohet para se të publikohet."],
+          ["Marka europiane premium", "Land Rover, Mercedes-Benz, BMW, Porsche, Audi dhe më shumë."],
           ["Çmime të qarta", "Çmimi që shihni është çmimi real, pa surpriza."],
-          ["Kontakt i shpejtë", "Na shkruani në WhatsApp për çdo makinë — përgjigjemi shpejt."],
+          ["Kontakt i shpejtë", "Na shkruani në WhatsApp për çdo automjet — përgjigjemi shpejt."],
         ].map(([t, d]) => (
           <div key={t} className="card p-6">
             <p className="font-bold">{t}</p>

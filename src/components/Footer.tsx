@@ -7,7 +7,7 @@ export default function Footer({ settings }: { settings: Settings }) {
     <footer className="mt-20 bg-ink text-slate-300">
       <div className="container-x grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-2">
-          <p className="text-xl font-black text-white">{settings.site_name}</p>
+          <p className="text-xl font-light uppercase tracking-[0.3em] text-white">{settings.site_name}</p>
           {settings.tagline && <p className="mt-2 max-w-sm text-sm">{settings.tagline}</p>}
           <div className="mt-4 flex gap-4 text-sm">
             {settings.facebook && <a href={settings.facebook} target="_blank" rel="noreferrer" className="hover:text-white">Facebook</a>}

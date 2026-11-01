@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0f172a;
-  --color-brand: #e8590c;
-  --color-brand-dark: #c2410c;
-  --color-paper: #f6f5f2;
+  --color-ink: #0b0b0c;
+  --color-brand: #c9a961;
+  --color-brand-dark: #8f7234;
+  --color-paper: #f5f4f1;
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -26,11 +26,11 @@ body {
 }
 
 @utility btn-primary {
-  @apply btn bg-brand text-white hover:bg-brand-dark;
+  @apply btn bg-brand text-ink hover:bg-[#b8964f];
 }
 
 @utility btn-dark {
-  @apply btn bg-ink text-white hover:bg-slate-700;
+  @apply btn bg-ink text-white hover:bg-neutral-800;
 }
 
 @utility btn-outline {

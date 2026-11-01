@@ -126,7 +126,7 @@ export default async function CarPage({ params }: { params: Params }) {
                   <iframe src={embed} title={title} className="h-full w-full" allowFullScreen />
                 </div>
               ) : (
-                <a href={car.video_url} target="_blank" rel="noreferrer" className="font-semibold text-brand hover:underline">
+                <a href={car.video_url} target="_blank" rel="noreferrer" className="font-semibold text-brand-dark hover:underline">
                   Shiko videon →
                 </a>
               )}
@@ -139,7 +139,7 @@ export default async function CarPage({ params }: { params: Params }) {
           <div className="card p-6">
             <div className="flex items-center gap-2">
               <StatusBadge status={car.status} />
-              {off > 0 && !sold && <span className="rounded-md bg-brand px-2 py-1 text-xs font-bold text-white">Ofertë -{off}%</span>}
+              {off > 0 && !sold && <span className="rounded-md bg-brand px-2 py-1 text-xs font-bold text-ink">Ofertë -{off}%</span>}
             </div>
             <h1 className="mt-3 text-2xl font-extrabold leading-tight">
               {title}
@@ -168,7 +168,7 @@ export default async function CarPage({ params }: { params: Params }) {
               </div>
             ) : (
               <p className="mt-5 rounded-lg bg-slate-100 p-3 text-sm text-slate-600">
-                Kjo makinë është shitur. <Link href="/makinat" className="font-semibold text-brand">Shiko makinat e tjera →</Link>
+                Kjo makinë është shitur. <Link href="/makinat" className="font-semibold text-brand-dark">Shiko makinat e tjera →</Link>
               </p>
             )}
           </div>

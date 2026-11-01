@@ -42,9 +42,9 @@ export default async function InquiriesPage({ searchParams }: { searchParams: Pr
                 )}
                 {q.message && <p className="mt-2 whitespace-pre-line text-sm text-slate-700">{q.message}</p>}
                 <div className="mt-3 flex flex-wrap gap-3 text-sm font-semibold">
-                  {q.phone && <a href={`tel:${q.phone}`} className="text-ink hover:text-brand">📞 {q.phone}</a>}
+                  {q.phone && <a href={`tel:${q.phone}`} className="text-ink hover:text-brand-dark">📞 {q.phone}</a>}
                   {wa && <a href={wa} target="_blank" rel="noreferrer" className="text-[#128C7E] hover:underline">WhatsApp</a>}
-                  {q.email && <a href={`mailto:${q.email}`} className="text-ink hover:text-brand">✉ {q.email}</a>}
+                  {q.email && <a href={`mailto:${q.email}`} className="text-ink hover:text-brand-dark">✉ {q.email}</a>}
                 </div>
               </div>
             );

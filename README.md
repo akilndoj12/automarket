@@ -1,4 +1,4 @@
-# AUTO MARKET — Platformë për shitjen e makinave
+# PRESTIGE MOTORS ALBANIA — Platformë për shitjen e automjeteve premium
 
 Faqe për shitjen e makinave ku **vetëm administratori** publikon, ndryshon dhe fshin makinat.
 Klientët i shikojnë, i filtrojnë dhe kontaktojnë me WhatsApp, telefon ose formular.

@@ -34,7 +34,7 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-ink p-4">
       <form onSubmit={onSubmit} className="w-full max-w-sm rounded-2xl bg-white p-8 shadow-2xl">
-        <p className="text-sm font-semibold uppercase tracking-widest text-brand">Paneli Admin</p>
+        <p className="text-sm font-semibold uppercase tracking-widest text-brand-dark">Paneli Admin</p>
         <h1 className="mt-1 text-2xl font-black">Hyr në llogari</h1>
         <div className="mt-6 space-y-4">
           <div>

@@ -93,7 +93,7 @@ export default function ImageManager({
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={src} alt="" className="h-full w-full object-cover" />
-            {i === 0 && <span className="absolute left-2 top-2 rounded bg-brand px-1.5 py-0.5 text-[10px] font-bold text-white">KRYESORE</span>}
+            {i === 0 && <span className="absolute left-2 top-2 rounded bg-brand px-1.5 py-0.5 text-[10px] font-bold text-ink">KRYESORE</span>}
             <div className="absolute inset-x-0 bottom-0 flex justify-between bg-black/60 p-1">
               <span className="flex gap-1">
                 <button type="button" onClick={() => move(i, i - 1)} className="rounded px-2 text-white hover:bg-white/20" aria-label="Majtas">←</button>
@@ -111,7 +111,7 @@ export default function ImageManager({
         <button
           type="button"
           onClick={() => input.current?.click()}
-          className="flex aspect-[4/3] flex-col items-center justify-center rounded-lg border-2 border-dashed border-slate-300 text-sm font-semibold text-slate-500 hover:border-brand hover:text-brand"
+          className="flex aspect-[4/3] flex-col items-center justify-center rounded-lg border-2 border-dashed border-slate-300 text-sm font-semibold text-slate-500 hover:border-brand hover:text-brand-dark"
         >
           <span className="text-3xl leading-none">+</span>
           {uploading > 0 ? `Duke ngarkuar (${uploading})…` : "Shto foto"}

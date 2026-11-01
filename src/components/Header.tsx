@@ -18,9 +18,11 @@ export function Logo({ settings }: { settings: Settings }) {
   }
   const [first, ...rest] = settings.site_name.split(" ");
   return (
-    <span className="text-xl font-black tracking-tight">
-      {first}
-      {rest.length > 0 && <span className="text-brand"> {rest.join(" ")}</span>}
+    <span className="flex flex-col leading-none">
+      <span className="text-lg font-light uppercase tracking-[0.3em]">{first}</span>
+      {rest.length > 0 && (
+        <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.55em] text-brand-dark">{rest.join(" ")}</span>
+      )}
     </span>
   );
 }
@@ -62,7 +64,7 @@ export default function Header({ settings }: { settings: Settings }) {
                 </Link>
               ))}
               {tel && (
-                <a href={tel} className="block border-t border-slate-100 px-4 py-3 text-sm font-semibold text-brand">
+                <a href={tel} className="block border-t border-slate-100 px-4 py-3 text-sm font-semibold text-brand-dark">
                   Telefono: {settings.phone}
                 </a>
               )}

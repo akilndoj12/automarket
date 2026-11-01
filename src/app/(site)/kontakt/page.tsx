@@ -17,7 +17,7 @@ export default async function ContactPage() {
       <div className="mt-6 grid gap-6 lg:grid-cols-2">
         <div className="card space-y-4 p-6">
           {s.phone && tel && (
-            <a href={tel} className="flex items-center gap-3 font-semibold hover:text-brand">
+            <a href={tel} className="flex items-center gap-3 font-semibold hover:text-brand-dark">
               <PhoneIcon /> {s.phone}
             </a>
           )}
@@ -27,7 +27,7 @@ export default async function ContactPage() {
             </a>
           )}
           {s.email && (
-            <a href={`mailto:${s.email}`} className="flex items-center gap-3 font-semibold hover:text-brand">
+            <a href={`mailto:${s.email}`} className="flex items-center gap-3 font-semibold hover:text-brand-dark">
               <MailIcon /> {s.email}
             </a>
           )}

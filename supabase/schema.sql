@@ -1,5 +1,5 @@
 -- =====================================================================
--- AUTO MARKET — struktura e databazës (Supabase / PostgreSQL)
+-- PRESTIGE MOTORS — struktura e databazës (Supabase / PostgreSQL)
 -- Ekzekutoje të gjithë këtë skedar një herë te Supabase → SQL Editor → Run
 -- =====================================================================
 
@@ -95,17 +95,17 @@ create table if not exists public.inquiries (
 -- ---------- Cilësimet e faqes (një rresht i vetëm) ----------
 create table if not exists public.settings (
   id          int primary key default 1 check (id = 1),
-  site_name   text not null default 'AUTO MARKET',
-  tagline     text default 'Makina të kontrolluara, me çmime të qarta',
-  phone       text default '+355 69 000 0000',
-  whatsapp    text default '355690000000',
-  email       text default 'info@automarket.al',
+  site_name   text not null default 'PRESTIGE MOTORS',
+  tagline     text default 'European Brands | Global Luxury — Koleksion ekskluziv i automjeteve premium.',
+  phone       text default '+355 69 444 8881',
+  whatsapp    text default '355694448881',
+  email       text,
   address     text default 'Tiranë, Shqipëri',
   hours       text default 'E hënë – E shtunë, 09:00 – 19:00',
-  about       text default 'Jemi një kompani që importon dhe shet automjete të përzgjedhura. Çdo makinë kontrollohet para se të publikohet.',
+  about       text default 'Prestige Motors Albania sjell në Tiranë një koleksion ekskluziv automjetesh premium nga markat më të njohura europiane. Çdo automjet përzgjidhet dhe kontrollohet me kujdes para se të ofrohet.',
   logo_url    text,
   facebook    text,
-  instagram   text,
+  instagram   text default 'https://instagram.com/prestige.motors.al',
   map_url     text,
   updated_at  timestamptz not null default now()
 );
