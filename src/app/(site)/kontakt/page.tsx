@@ -13,7 +13,7 @@ export default async function ContactPage() {
 
   return (
     <div className="container-x py-12">
-      <h1 className="text-3xl font-extrabold">Kontakt</h1>
+      <h1 className="text-3xl font-light uppercase tracking-wide">Kontakt</h1>
       <div className="mt-6 grid gap-6 lg:grid-cols-2">
         <div className="card space-y-4 p-6">
           {s.phone && tel && (
@@ -36,9 +36,9 @@ export default async function ContactPage() {
               <PinIcon /> {s.address}
             </p>
           )}
-          {s.hours && <p className="text-sm text-slate-500">Orari: {s.hours}</p>}
+          {s.hours && <p className="text-sm text-muted">Orari: {s.hours}</p>}
           {s.map_url && (
-            <div className="aspect-video overflow-hidden rounded-lg border border-slate-200">
+            <div className="aspect-video overflow-hidden rounded-lg border border-line">
               <iframe src={s.map_url} title="Harta" className="h-full w-full" loading="lazy" />
             </div>
           )}

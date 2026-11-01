@@ -31,7 +31,7 @@ export default function Gallery({ images, title, dim }: { images: string[]; titl
 
   return (
     <div>
-      <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-900">
+      <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={images[i]}
@@ -41,8 +41,8 @@ export default function Gallery({ images, title, dim }: { images: string[]; titl
         />
         {n > 1 && (
           <>
-            <button onClick={prev} aria-label="Foto e mëparshme" className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 shadow hover:bg-white">‹</button>
-            <button onClick={next} aria-label="Foto tjetër" className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 shadow hover:bg-white">›</button>
+            <button onClick={prev} aria-label="Foto e mëparshme" className="absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/60 text-xl text-white backdrop-blur hover:bg-black/80">‹</button>
+            <button onClick={next} aria-label="Foto tjetër" className="absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/60 text-xl text-white backdrop-blur hover:bg-black/80">›</button>
             <span className="absolute bottom-3 right-3 rounded-md bg-black/60 px-2 py-0.5 text-xs text-white">
               {i + 1} / {n}
             </span>

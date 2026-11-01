@@ -9,9 +9,9 @@ export const dynamic = "force-dynamic";
 export default async function SiteLayout({ children }: { children: React.ReactNode }) {
   const settings = await getSettings();
   return (
-    <>
+    <div className="theme-dark min-h-screen bg-bg text-fg">
       {!isSupabaseConfigured && (
-        <div className="bg-amber-100 px-4 py-2 text-center text-xs font-medium text-amber-900">
+        <div className="bg-brand px-4 py-1.5 text-center text-xs font-medium text-black">
           Mënyra demo: databaza nuk është lidhur ende — makinat që shihni janë shembuj.
         </div>
       )}
@@ -19,6 +19,6 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       <main>{children}</main>
       <Footer settings={settings} />
       <WhatsAppFloat number={settings.whatsapp} />
-    </>
+    </div>
   );
 }

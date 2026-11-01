@@ -72,12 +72,12 @@ export default async function CarPage({ params }: { params: Params }) {
 
   return (
     <div className="container-x py-8">
-      <nav className="mb-4 text-sm text-slate-500">
-        <Link href="/makinat" className="hover:text-ink">Makinat</Link>
+      <nav className="mb-4 text-sm text-muted">
+        <Link href="/makinat" className="hover:text-fg">Makinat</Link>
         <span className="mx-2">/</span>
-        <Link href={`/makinat?marka=${encodeURIComponent(car.brand)}`} className="hover:text-ink">{car.brand}</Link>
+        <Link href={`/makinat?marka=${encodeURIComponent(car.brand)}`} className="hover:text-fg">{car.brand}</Link>
         <span className="mx-2">/</span>
-        <span className="text-ink">{car.model}</span>
+        <span className="text-fg">{car.model}</span>
       </nav>
 
       <div className="grid gap-8 lg:grid-cols-[1fr_380px]">
@@ -90,8 +90,8 @@ export default async function CarPage({ params }: { params: Params }) {
               {specs
                 .filter(([, v]) => v !== null && v !== undefined && v !== "")
                 .map(([k, v]) => (
-                  <div key={k} className="flex justify-between border-b border-slate-100 pb-2 text-sm">
-                    <dt className="text-slate-500">{k}</dt>
+                  <div key={k} className="flex justify-between border-b border-line pb-2 text-sm">
+                    <dt className="text-muted">{k}</dt>
                     <dd className="font-semibold">{v}</dd>
                   </div>
                 ))}
@@ -114,7 +114,7 @@ export default async function CarPage({ params }: { params: Params }) {
           {car.description && (
             <section className="card mt-6 p-6">
               <h2 className="mb-3 text-lg font-bold">Përshkrimi</h2>
-              <p className="whitespace-pre-line text-sm leading-relaxed text-slate-700">{car.description}</p>
+              <p className="whitespace-pre-line text-sm leading-relaxed text-muted">{car.description}</p>
             </section>
           )}
 
@@ -126,7 +126,7 @@ export default async function CarPage({ params }: { params: Params }) {
                   <iframe src={embed} title={title} className="h-full w-full" allowFullScreen />
                 </div>
               ) : (
-                <a href={car.video_url} target="_blank" rel="noreferrer" className="font-semibold text-brand-dark hover:underline">
+                <a href={car.video_url} target="_blank" rel="noreferrer" className="font-semibold text-accent hover:underline">
                   Shiko videon →
                 </a>
               )}
@@ -139,18 +139,18 @@ export default async function CarPage({ params }: { params: Params }) {
           <div className="card p-6">
             <div className="flex items-center gap-2">
               <StatusBadge status={car.status} />
-              {off > 0 && !sold && <span className="rounded-md bg-brand px-2 py-1 text-xs font-bold text-ink">Ofertë -{off}%</span>}
+              {off > 0 && !sold && <span className="rounded-md bg-brand px-2 py-1 text-xs font-bold text-fg">Ofertë -{off}%</span>}
             </div>
-            <h1 className="mt-3 text-2xl font-extrabold leading-tight">
+            <h1 className="mt-3 text-2xl font-light uppercase tracking-wide leading-tight">
               {title}
-              {car.version && <span className="block text-base font-medium text-slate-500">{car.version}</span>}
+              {car.version && <span className="block text-base font-medium text-muted">{car.version}</span>}
             </h1>
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-muted">
               {[car.year, car.fuel, car.transmission, formatKm(car.mileage)].filter(Boolean).join(" • ")}
             </p>
             <div className="mt-4 flex items-end gap-3">
-              <span className="text-3xl font-black">{formatPrice(car.price)}</span>
-              {off > 0 && <span className="pb-1 text-slate-400 line-through">{formatPrice(car.old_price)}</span>}
+              <span className="text-3xl font-semibold text-accent">{formatPrice(car.price)}</span>
+              {off > 0 && <span className="pb-1 text-muted line-through">{formatPrice(car.old_price)}</span>}
             </div>
 
             {!sold ? (
@@ -161,14 +161,14 @@ export default async function CarPage({ params }: { params: Params }) {
                   </a>
                 )}
                 {tel && (
-                  <a href={tel} className="btn-dark w-full py-3">
+                  <a href={tel} className="btn-outline w-full py-3">
                     <PhoneIcon /> Telefono {settings.phone}
                   </a>
                 )}
               </div>
             ) : (
-              <p className="mt-5 rounded-lg bg-slate-100 p-3 text-sm text-slate-600">
-                Kjo makinë është shitur. <Link href="/makinat" className="font-semibold text-brand-dark">Shiko makinat e tjera →</Link>
+              <p className="mt-5 rounded-lg bg-white/5 p-3 text-sm text-muted">
+                Kjo makinë është shitur. <Link href="/makinat" className="font-semibold text-accent">Shiko makinat e tjera →</Link>
               </p>
             )}
           </div>
@@ -184,7 +184,7 @@ export default async function CarPage({ params }: { params: Params }) {
 
       {similar.length > 0 && (
         <section className="mt-14">
-          <h2 className="mb-5 text-2xl font-extrabold">Makina të ngjashme</h2>
+          <h2 className="mb-5 text-2xl font-light uppercase tracking-wide">Makina të ngjashme</h2>
           <CarGrid cars={similar} />
         </section>
       )}

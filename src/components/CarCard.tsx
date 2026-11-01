@@ -10,9 +10,9 @@ export default function CarCard({ car }: { car: Car }) {
   return (
     <Link
       href={`/makinat/${car.id}`}
-      className="group card flex flex-col overflow-hidden transition hover:-translate-y-0.5 hover:shadow-lg"
+      className="group card flex flex-col overflow-hidden transition hover:border-brand/60"
     >
-      <div className="relative aspect-[4/3] overflow-hidden bg-slate-200">
+      <div className="relative aspect-[16/10] overflow-hidden bg-surface">
         {car.images[0] ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -27,7 +27,7 @@ export default function CarCard({ car }: { car: Car }) {
         <div className="absolute left-3 top-3 flex gap-1.5">
           {car.status !== "active" && <StatusBadge status={car.status} />}
           {off > 0 && !sold && (
-            <span className="rounded-md bg-brand px-2 py-1 text-xs font-bold text-ink">-{off}%</span>
+            <span className="rounded-md bg-brand px-2 py-1 text-xs font-bold text-fg">-{off}%</span>
           )}
         </div>
         {car.images.length > 1 && (
@@ -37,17 +37,17 @@ export default function CarCard({ car }: { car: Car }) {
         )}
       </div>
       <div className="flex flex-1 flex-col p-4">
-        <h3 className="font-bold leading-tight">
+        <h3 className="text-lg font-semibold leading-tight">
           {carTitle(car)}
-          {car.version && <span className="font-normal text-slate-500"> {car.version}</span>}
+          {car.version && <span className="font-normal text-muted"> {car.version}</span>}
         </h3>
-        <p className="mt-1 text-sm text-slate-500">
-          {[car.year, car.fuel, car.transmission, formatKm(car.mileage)].filter(Boolean).join(" • ")}
+        <p className="mt-1 text-sm text-muted">
+          {[car.year, formatKm(car.mileage), car.fuel, car.transmission, car.drive].filter(Boolean).join(" · ")}
         </p>
         <div className="mt-auto flex items-end gap-2 pt-3">
-          <span className="text-xl font-extrabold">{formatPrice(car.price)}</span>
+          <span className="text-xl font-semibold text-accent">{formatPrice(car.price)}</span>
           {off > 0 && (
-            <span className="pb-0.5 text-sm text-slate-400 line-through">{formatPrice(car.old_price)}</span>
+            <span className="pb-0.5 text-sm text-muted line-through">{formatPrice(car.old_price)}</span>
           )}
         </div>
       </div>

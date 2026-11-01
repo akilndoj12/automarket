@@ -18,8 +18,8 @@ export default async function CarsPage({ searchParams }: { searchParams: SP }) {
     <div className="container-x py-10">
       <div className="mb-6 flex flex-wrap items-end justify-between gap-2">
         <div>
-          <h1 className="text-3xl font-extrabold">{f.offer ? "Makinat në ofertë" : "Të gjitha makinat"}</h1>
-          <p className="mt-1 text-sm text-slate-500">{total} makina të gjetura</p>
+          <h1 className="text-3xl font-light uppercase tracking-wide">{f.offer ? "Makinat në ofertë" : "Të gjitha makinat"}</h1>
+          <p className="mt-1 text-sm text-muted">{total} makina të gjetura</p>
         </div>
       </div>
       <div className="grid gap-6 lg:grid-cols-[280px_1fr]">

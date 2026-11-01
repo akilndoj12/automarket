@@ -4,7 +4,7 @@ import { MailIcon, PhoneIcon, PinIcon } from "./Icons";
 
 export default function Footer({ settings }: { settings: Settings }) {
   return (
-    <footer className="mt-20 bg-ink text-slate-300">
+    <footer className="mt-24 border-t border-line bg-black text-muted">
       <div className="container-x grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-2">
           <p className="text-xl font-light uppercase tracking-[0.3em] text-white">{settings.site_name}</p>
@@ -29,11 +29,11 @@ export default function Footer({ settings }: { settings: Settings }) {
             {settings.phone && <li className="flex gap-2"><PhoneIcon className="h-4 w-4 shrink-0" />{settings.phone}</li>}
             {settings.email && <li className="flex gap-2"><MailIcon className="h-4 w-4 shrink-0" />{settings.email}</li>}
             {settings.address && <li className="flex gap-2"><PinIcon className="h-4 w-4 shrink-0" />{settings.address}</li>}
-            {settings.hours && <li className="text-slate-400">{settings.hours}</li>}
+            {settings.hours && <li className="text-muted">{settings.hours}</li>}
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10 py-5 text-center text-xs text-slate-500">
+      <div className="border-t border-white/10 py-5 text-center text-xs text-muted">
         © {new Date().getFullYear()} {settings.site_name}. Të gjitha të drejtat e rezervuara.
       </div>
     </footer>

@@ -33,7 +33,7 @@ export default function InquiryForm({ carId, defaultMessage = "" }: { carId?: st
         <textarea id="iq-msg" name="message" rows={4} className="input" defaultValue={defaultMessage} />
       </div>
       {state && !state.ok && <p className="text-sm font-medium text-red-600">{state.message}</p>}
-      <button disabled={pending} className="btn-dark w-full">
+      <button disabled={pending} className="btn-primary w-full">
         {pending ? "Duke dërguar…" : "Dërgo kërkesën"}
       </button>
     </form>

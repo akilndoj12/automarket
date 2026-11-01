@@ -35,8 +35,8 @@ export function PinIcon({ className = "h-5 w-5" }: P) {
 
 export function CarPlaceholder({ className = "" }: P) {
   return (
-    <div className={`flex h-full w-full items-center justify-center bg-gradient-to-br from-slate-200 to-slate-300 ${className}`}>
-      <svg viewBox="0 0 64 32" className="w-1/2 max-w-40 text-slate-400" fill="currentColor" aria-hidden>
+    <div className={`flex h-full w-full items-center justify-center bg-gradient-to-br from-[#1c1c1c] to-[#101010] ${className}`}>
+      <svg viewBox="0 0 64 32" className="w-1/2 max-w-40 text-muted" fill="currentColor" aria-hidden>
         <path d="M10 22a5 5 0 1 0 10 0 5 5 0 0 0-10 0Zm34 0a5 5 0 1 0 10 0 5 5 0 0 0-10 0ZM6 21c-2 0-3-1-3-3v-3c0-1.5 1-2.5 2.5-3l8-2 7-6C22 3 24 2.5 26 2.5h12c2.5 0 4.5 1 6 2.5l6 5.5 7 1.5c2.5.5 4 2.5 4 5V18c0 2-1 3-3 3h-2.2a7 7 0 0 0-13.6 0H22.8a7 7 0 0 0-13.6 0H6Zm19-15-5 5h12V5.5h-5c-1 0-1.5 0-2 .5Zm10.5-.5V11h10l-4-4c-.8-.8-1.6-1.5-3-1.5h-3Z" />
       </svg>
     </div>

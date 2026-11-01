@@ -11,7 +11,7 @@ export default function CarGrid({
   narrow?: boolean;
 }) {
   if (cars.length === 0) {
-    return <div className="card p-10 text-center text-slate-500">{empty}</div>;
+    return <div className="card p-10 text-center text-muted">{empty}</div>;
   }
   return (
     <div className={`grid gap-5 sm:grid-cols-2 ${narrow ? "xl:grid-cols-3" : "lg:grid-cols-3 xl:grid-cols-4"}`}>

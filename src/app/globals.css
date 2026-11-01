@@ -8,13 +8,42 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
+/* Ngjyrat që ndryshojnë sipas temës (e çelët = paneli Admin, e errët = faqja publike) */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+}
+
+:root {
+  --bg: #f5f4f1;
+  --fg: #0b0b0c;
+  --surface: #ffffff;
+  --line: #e2e8f0;
+  --muted: #64748b;
+  --accent: #8f7234;
+}
+
+.theme-dark {
+  --bg: #0a0a0a;
+  --fg: #f4f2ee;
+  --surface: #141414;
+  --line: #262626;
+  --muted: #9a968f;
+  --accent: #c9a961;
+  color-scheme: dark;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--color-paper);
-  color: var(--color-ink);
+  background: var(--bg);
+  color: var(--fg);
 }
 
 @utility container-x {
@@ -34,7 +63,7 @@ body {
 }
 
 @utility btn-outline {
-  @apply btn border border-slate-300 bg-white text-ink hover:border-slate-400;
+  @apply btn border border-line bg-surface text-fg hover:border-brand;
 }
 
 @utility btn-whatsapp {
@@ -42,13 +71,13 @@ body {
 }
 
 @utility input {
-  @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-ink outline-none focus:border-brand focus:ring-2 focus:ring-brand/20;
+  @apply w-full rounded-lg border border-line bg-surface px-3 py-2 text-sm text-fg outline-none focus:border-brand focus:ring-2 focus:ring-brand/20;
 }
 
 @utility label {
-  @apply mb-1 block text-xs font-semibold uppercase tracking-wide text-slate-500;
+  @apply mb-1 block text-xs font-semibold uppercase tracking-wide text-muted;
 }
 
 @utility card {
-  @apply rounded-xl border border-slate-200 bg-white;
+  @apply rounded-xl border border-line bg-surface;
 }

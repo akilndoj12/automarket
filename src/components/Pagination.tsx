@@ -27,7 +27,7 @@ export default function Pagination({
           key={p}
           href={href(p)}
           className={`min-w-10 rounded-lg border px-3 py-2 text-center text-sm font-semibold ${
-            p === page ? "border-ink bg-ink text-white" : "border-slate-300 bg-white hover:border-slate-400"
+            p === page ? "border-brand bg-brand text-black" : "border-line bg-surface hover:border-brand"
           }`}
         >
           {p}
